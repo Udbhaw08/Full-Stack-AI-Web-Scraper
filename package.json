@@ -1,0 +1,34 @@
+{
+  "name": "pagebrief-ai-web-scraper",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "A full-stack web page summarizer with React, Express, Cheerio, and Gemini AI.",
+  "scripts": {
+    "dev": "concurrently -k \"npm:dev:server\" \"npm:dev:client\"",
+    "dev:server": "node --watch api/index.js",
+    "dev:client": "vite --host 0.0.0.0",
+    "build": "vite build",
+    "start": "cross-env NODE_ENV=production node api/index.js"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "dependencies": {
+    "@google/genai": "^1.30.0",
+    "cheerio": "^1.1.2",
+    "cross-env": "^10.1.0",
+    "dotenv": "^17.2.2",
+    "express": "^5.1.0",
+    "express-rate-limit": "^8.1.0",
+    "helmet": "^8.1.0",
+    "ipaddr.js": "^2.2.0",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^5.0.4",
+    "concurrently": "^9.2.1",
+    "vite": "^7.1.7"
+  }
+}
